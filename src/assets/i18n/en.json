@@ -1,0 +1,12 @@
+{
+  "PRINCIPAL": {
+    "TITLE": "Hi, welcome",
+    "FORM_TEXT1": "First Name",
+    "FORM_TEXT2": "Age",
+    "FORM_TEXT3": "Complete Information",
+    "FORM_TEXT4": "Capital First Name",
+    "BOTTOM_1": "Change First Name",
+    "BOTTOM_2": "Change age",
+    "BOTTOM_3": "Restore"
+  }
+}

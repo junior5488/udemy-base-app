@@ -1,0 +1,24 @@
+
+
+<h3> {{listName()}} </h3>
+    <ul>
+      @for (character of characters(); track character.id; let idx = $index, isLast = $last, total = $count) {
+        <li>
+          <span>{{idx + 1}} - {{character.name}}</span>
+          <strong
+            [class.text-danger]="character.race === 'Sayayin'"
+            [class.text-success]="character.race !== 'Sayayin'"
+            >
+            / Raza {{character.race}}
+          </strong>
+
+          <strong>
+            ({{character.power}})
+          </strong>
+        </li>
+
+        @if (isLast) {
+          <p class="mt-2 text-info">Total de registros: {{ total }}</p>
+        }
+      }
+    </ul>

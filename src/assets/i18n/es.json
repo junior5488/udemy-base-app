@@ -1,0 +1,12 @@
+{
+  "PRINCIPAL": {
+    "TITLE": "Hola, bienvenido",
+    "FORM_TEXT1": "Nombre",
+    "FORM_TEXT2": "Edad",
+    "FORM_TEXT3": "Información completa",
+    "FORM_TEXT4": "Nombre Capitalizado",
+    "BOTTOM_1": "Cambiar nombre",
+    "BOTTOM_2": "Cambiar edad",
+    "BOTTOM_3": "Restaurar"
+  }
+}

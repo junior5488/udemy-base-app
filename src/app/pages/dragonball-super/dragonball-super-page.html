@@ -1,0 +1,26 @@
+<style>
+  .fw-bold {
+    font-weight: bold;
+  }
+
+  .bg-light {
+    background-color: yellow;
+  }
+</style>
+
+<h1>Dragon Ball Page</h1>
+<hr />
+
+<section class="row">
+  <div class="col-12 col-sm-6">
+    <dragonball-character-add
+      (newCharacter)="dragonballService.addCharacter($event)"/>
+  </div>
+
+  <div class="col-12 col-sm-6">
+    <dragonball-character-list
+      [characters]="dragonballService.characters()"
+      listName="Listado de Personajes"/>
+  </div>
+</section>
+
