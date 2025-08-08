@@ -8,7 +8,6 @@ export const routes: Routes = [
   },
   {
     path: 'hero',
-    //Configurar rutas con Lazy Loading
     loadComponent: () =>
       import('./pages/hero/hero-page').then(m => m.HeroPageComponent)
   },
@@ -31,7 +30,4 @@ export const routes: Routes = [
     path: '**',
     redirectTo: '',
   },
-  // admin => AdminComponent
-
-  // / => HomeComponent
 ];

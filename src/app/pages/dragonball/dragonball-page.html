@@ -53,34 +53,11 @@
 
   <div class="col-12 col-sm-6">
     <h3>Listado: </h3>
-    <!-- <ul>
-      @for (character of characters(); track character.id; let idx = $index;) {
-        <li>
-          <span>{{idx + 1}} - {{character.name}}</span>
-          <strong class="text-danger"> ({{character.power}})</strong>
-        </li>
-      }
-    </ul> -->
-
-    <!-- Marcamos el primer registro -->
-    <!-- <ul>
-      @for (character of characters(); track character.id; let idx = $index, isFirst = $first) {
-        <li [class.fw-bold]="isFirst">
-          <span>{{idx + 1}} - {{character.name}}</span>
-          <strong class="text-danger"> ({{character.power}})</strong>
-        </li>
-      }
-    </ul> -->
-
     <!-- Marcamos el primer registro -->
     <ul>
       @for (character of characters(); track character.id; let idx = $index, isOdd = $odd, isLast = $last, total = $count) {
         <li [class.fw-bold]="isOdd">
           <span>{{idx + 1}} - {{character.name}}</span>
-          <!-- <strong
-            [class.text-danger]="character.power > 9000"
-            [class.text-primary]="character.power <= 9000"
-            > -->
 
           <strong
             [class.text-danger]="character.race === 'Sayayin'"
@@ -88,10 +65,6 @@
             >
             / Raza {{character.race}}
           </strong>
-
-          <!-- <strong
-            [ngClass]="powerClasses()"
-            > -->
 
           <strong
             [ngClass]="powerClasses(character)"
@@ -107,62 +80,5 @@
       }
     </ul>
   </div>
-
-  <!-- <div class="col-12 col-sm-6">
-    <h3>Listado Fuertes: </h3>
-    <ul>
-      @for (character of characters(); track character.id; let idx = $index, isOdd = $odd, isLast = $last, total = $count) {
-        @if (character.power >= 1000) {
-          <li>
-            <span>{{idx + 1}} - {{character.name}}</span>
-            <strong
-              [class.text-danger]="character.race === 'Sayayin'"
-              [class.text-success]="character.race !== 'Sayayin'"
-              >
-              / Raza {{character.race}}
-            </strong>
-            <strong
-              [ngClass]="powerClasses(character)"
-              >
-              ({{character.power}})
-            </strong>
-          </li>
-        }@else {
-          <li><strong>Por las, puro bot....</strong></li>
-        }
-
-        @if (isLast) {
-          <p class="mt-2 text-info">Total de registros: {{ total }}</p>
-        }
-      }
-    </ul>
-  </div> -->
-
-  <!-- <div class="col-12 col-sm-6">
-    <h3>Listado Débiles: </h3>
-    <ul>
-      @for (character of characters(); track character.id; let idx = $index, isOdd = $odd, isLast = $last, total = $count) {
-        @if (character.power < 1000) {
-          <li>
-            <span>{{idx + 1}} - {{character.name}}</span>
-            <strong
-              [class.text-danger]="character.race === 'Sayayin'"
-              [class.text-success]="character.race !== 'Sayayin'"
-              >
-              / Raza {{character.race}}
-            </strong>
-            <strong
-              [ngClass]="powerClasses(character)"
-              >
-              ({{character.power}})
-            </strong>
-          </li>
-        }
-        @if (isLast) {
-          <p class="mt-2 text-info">Total de registros: {{ total }}</p>
-        }
-      }
-    </ul>
-  </div> -->
 </section>
 

@@ -9,7 +9,6 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
     provideRouter(routes),
-    //HashStrategy
     {
       provide: LocationStrategy,
       useClass: HashLocationStrategy

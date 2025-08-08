@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input, output, signal } from '@angular/core';
+import { Component, output, signal } from '@angular/core';
 import { Character } from '../../../interfaces/character.interface';
 
 
@@ -6,7 +6,6 @@ import { Character } from '../../../interfaces/character.interface';
   selector: 'dragonball-character-add',
   imports: [],
   templateUrl: './character-add.component.html',
-  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CharacterAddComponent {
   name = signal('');
@@ -14,6 +13,7 @@ export class CharacterAddComponent {
   race = signal('');
 
   newCharacter = output<Character>();
+
   addCharacter() {
     if(!this.name() || !this.power() || !this.race() || this.power() <= 1000) {
       return;
@@ -24,7 +24,7 @@ export class CharacterAddComponent {
         power: this.power(),
         race: this.race()
       }
-      // this.characters.update( (list) => [ ...list, newChar] )
+
       this.newCharacter.emit(newChar);
       this.resetFields();
     }

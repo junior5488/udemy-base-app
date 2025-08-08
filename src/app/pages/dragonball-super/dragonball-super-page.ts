@@ -14,18 +14,5 @@ import { CharacterAddComponent } from "../../components/dragonball/character-add
   templateUrl: './dragonball-super-page.html',
 })
 export class DragonballSuperPage {
-  // Inyeccion tradicional
-  // constructor(public dragonballService: DragonballService) {  }
-
-  // Nueva forma de DI (recomendado)
   public dragonballService = inject(DragonballService);
-
-//   characters = signal<Character[]>([
-//     {id: 1, name: 'Goku', power: 10000, race: 'Sayayin'},
-//     {id: 2, name: 'Vegeta', power: 9000, race: 'Sayayin'},
-//   ]);
-
-//   addCharacter(newCharacter: Character) {
-//     this.characters.update( list => [ ... list, newCharacter]);
-//   }
 }
